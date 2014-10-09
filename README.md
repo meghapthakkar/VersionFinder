@@ -1,20 +1,6 @@
 
 
-# Versioning
+This project finds the version of any application (on amazon app store) from its url.
 
-
-
-## Usage
-
-
-
-## Developing
-
-
-
-### Tools
-
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
+Currently it uses non persistent hash-map for storing past versions. (This is recorded when user searches for the url for the first time)
+It compares existing and new value for particular url and determines if the version has changed or not.
