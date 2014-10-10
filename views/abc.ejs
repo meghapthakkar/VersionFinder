@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <%if(changed==true){%>
+      Version is changed. 
+ 
+      <%}else{%>
+      Version has not changed.
+      <%}%>
+    Current version is: 
+    <%for(i=0;i<vernum.length;i++){%>
+    <%= vernum[i] %>.
+    <%}%>
+    
+  </body>
+</html>
