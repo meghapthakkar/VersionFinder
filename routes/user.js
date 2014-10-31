@@ -32,16 +32,17 @@ exports.findVersion=function(req,res){
 			map.set("url",defaultVersion)
 			if(versionindex>-1)
 				{
-					changed=true
+					changed=false
 					var oldVer=map.get("url")
 					if(oldVer!=null){
 						for(i=0;i<oldVer.length;i++){
-							if(oldVer[i]!=vernum){
-								changed=false;
+							if(oldVer[i]!=vernum[i]){
+								console.log(oldVer[i]+" "+vernum[i]+" Version numbesr" )
+								changed=true;
 								break;
 							}
 						}
-						if(changed=true){
+						if(changed===true){
 							map.set("url",vernum)
 							}
 						res.render('abc.ejs',{changed:changed,vernum:vernum})
@@ -54,7 +55,7 @@ exports.findVersion=function(req,res){
 			else{
 				console.log("does not exist")
 			}
-		
+
 		})
 	})
 }
